@@ -674,7 +674,7 @@ var <var>api</var> = $(<var>'JQUERY SELECTOR'</var>).<dfn>eq</dfn>(0).<dfn>simpl
 
          <div class="downloads">
             <a name="downloads"></a>
-            <h1><a href="http://code.google.com/p/jquery-simpletip/issues/list">View/report issues</a> Download stable <b><?=$version?></b></h1>
+            <h1>Download stable <b><?=$version?></b></h1>
             <table class="versions" cellpadding="0" cellspacing="0">
                <thead>
                   <tr>
@@ -701,11 +701,7 @@ var <var>api</var> = $(<var>'JQUERY SELECTOR'</var>).<dfn>eq</dfn>(0).<dfn>simpl
             </table>
             <div class="tip">Please right click and choose "save link as ..." (or similar)</div>
 
-            <h1><a href="http://code.google.com/p/jquery-simpletip/issues/list">View/report issues</a> Download Simple2 Beta</b></h1>
-            <p>Checkout the <a href="/projects/simpletip/sandbox/">Simpletip2 Sandbox site</a> for the all new betas.</p>
-            <a name="changelog"></a>
             <h1>Changelog</h1>
-
             <h2><b>Simpletip</b> 1.3.1</h2>
             <h3 class="level"><b>level:</b> Patch</b></h3>
             <h3 class="released"><b>released:</b> February 5, 2009 - 11:04am</h3>
@@ -790,8 +786,6 @@ var <var>api</var> = $(<var>'JQUERY SELECTOR'</var>).<dfn>eq</dfn>(0).<dfn>simpl
 
    <div class="footer">
       <a href="http://code.google.com/p/jquery-simpletip/"><b>google code project</b></a> -
-      <a href="http://groups.google.com/group/jquery-simpletip/">forum / discussion group</a> -
-      <a href="http://plugins.jquery.com/project/simpletip">jQuery plugin project</a> -
       <a href="http://craigsworks.com">my portfolio</a> -
       <a href="mailto:craig@craigsworks.com">contact me</a>
    </div>
