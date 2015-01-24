@@ -1,0 +1,210 @@
+
+#master{
+   width: 900px;
+}
+
+#navigation{
+   position: fixed;
+   right: 0;
+   top: 0;
+   padding: 15px;
+   width: 200px;
+}
+
+   #navigation a{
+      padding: 3px 7px;
+      display: block;
+      border: 1px solid gray;
+      background-color: #f6f6f6;
+      font-weight: bold;
+      margin-bottom: 2px;
+   }
+
+
+
+p.note{ clear: both; }
+
+#demonstrations ul, 
+#demonstrations ul li{ float: left; margin: -40px 0 0; padding: 0; }
+
+#demonstrations ul li{
+   list-style-type: none;
+   float: left;
+   margin-top: 50px;
+   cursor: default;
+}
+
+#demonstrations ul li .pad1,
+#demonstrations ul li .pad2,
+#demonstrations ul li .pad3{ 
+   border: 1px solid gray; 
+   padding: 4px 5px;
+   margin-bottom: 3px;
+   margin-right: 10px;
+   
+   background-color: white;
+}
+
+#demonstrations img{ float: left;  }
+
+#hooks img, #stems img{
+   float: right;
+}
+
+table{
+   border-top: 1px solid gray;
+   margin-bottom: 15px;
+}
+
+table td{
+   width: 30%;
+   padding: 4px 0;
+   
+   border-bottom: 1px solid gray;
+}
+
+table td.name{
+   width: 10%;
+}
+
+code{
+   -moz-border-radius-bottomleft:5px;
+   -moz-border-radius-bottomright:5px;
+   -moz-border-radius-topleft:5px;
+   -moz-border-radius-topright:5px;
+   background-color:#F7F7F7;
+   border-color:#6699CC;
+   border-style:solid;
+   border-width:1px 1px 1px 15px;
+   display:block;
+   font-family:monospace;
+   line-height:17px;
+   margin:6px 10px 8px 0;
+   overflow:hidden;
+   padding:2px 30px 2px 15px;
+   text-align:left;
+   white-space:pre;
+}
+
+.section, .subsection{
+   clear: both;
+}
+
+.simpletip{ position: absolute; }
+
+   .simpletip .content .title{
+      padding: 5px 7px;
+      margin: -6px -6px 8px;
+      background-color: #eee;
+      font-weight: bold;
+      color: #999;
+   }
+      
+      .simpletip .content .title .close{ float: right; }
+      
+   .simpletip .ajaxdemo{
+      font-size: 10px;
+   }
+   
+      .simpletip .ajaxdemo h1{
+         margin: 3px 0 5px;
+         font-size: 15px;
+         font-family: Georgia, serif;
+      }
+      
+      .simpletip .ajaxdemo img{ float: left; padding: 0 7px 7px 0; }
+
+.tooltip .content{
+   width: 160px;
+   padding: 7px;
+   border: 5px solid #EBE4B4;
+   background-color: #F8F4CA;
+   
+   font-size: 11px;
+   color: #BB9C61;
+}
+
+   .tooltip .content .title{
+      margin: -7px -7px 5px;
+      background-color: #F3EDC2;
+      color: #BB9C61;
+   }
+
+.tooltip-simple .content{
+   width: 140px;
+   padding: 3px 7px;
+   
+   border: 1px solid #ddd;
+   background-color: white;
+}
+
+.tooltip-blue .content{
+   width: 160px;
+   padding: 9px;
+   
+   border: 7px solid #448FD8;
+   
+   background-color: #5FADFA;
+   color: white;
+}
+
+   .tooltip-blue .content .title{
+      margin: -9px -9px 5px;
+      background-color: #0D7CD0;
+      color: white;
+   }
+   
+      .tooltip-blue .content .title a.close{
+         height: 22px;
+         width: 28px;
+         display: block;
+         float: right;
+         margin: -3px -3px 0 0;
+         
+         background: transparent url('/simpletip/sandbox/images/buttonblue.jpg') no-repeat 0 0;
+      }
+
+.tooltip-light .content{
+   width: 200px;
+   padding: 6px;
+   
+   border: 6px solid #ccc;
+   
+   background-color: white;
+   color: #303030;
+}
+
+   .tooltip-light .content .title{
+      margin: -6px -6px 5px;
+      background-color: #eee;
+      color: #999;
+   }
+
+      .tooltip-light .content .title a,
+      .tooltip-light .content .title a:link,
+      .tooltip-light .content .title a:visited{
+         color: #999;
+      }
+
+
+.tooltip-black .content{
+   width: 190px;
+   padding: 7px;
+   
+   border: 5px solid #303030;
+   
+   background-color: #888;
+   color: white;
+}
+
+   .tooltip-black .content .title{
+      margin: -7px -7px 5px;
+      background-color: #666;
+      color: white;
+   }
+   
+      .tooltip-black .content .title a,
+      .tooltip-black .content .title a:link,
+      .tooltip-black .content .title a:visited{
+         color: white;
+      }

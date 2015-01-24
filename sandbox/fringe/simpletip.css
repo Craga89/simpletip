@@ -1,0 +1,635 @@
+/*=======================================
+* Base styles
+* ======================================*/
+body{
+   padding: 0;
+   margin: 0;
+   
+   font-family: sans-serif;
+   font-size: 12px;
+   
+   background: #fdffe4 url('/simpletip/project/images/bg.jpg') repeat top left;
+   color: #404040;
+}
+
+ul{
+   margin: 5px 0 0 30px;
+   padding: 0;
+   list-style-type: circle;
+}
+ul li{ margin: 0; padding: 0; }
+
+img{ border: 0; }
+
+.pngfix{ behavior: url('/css/iepngfix.htc'); }
+
+h5{
+   margin: 2px 0 5px;
+}
+
+p.note{
+   clear: both;
+   padding-top: 7px;
+}
+
+
+/*=======================================
+* Links
+* ======================================*/
+a, a:link, a:hover, a:active, a:visited{
+   color: #6699CC;
+   text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+   a.page{ color: #FF7C0A; font-weight: bold; }
+
+
+
+/*=======================================
+* Code
+* =====================================*/
+code{
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   
+   background-color:#F7F7F7;
+   border-color:#6699CC;
+   border-style:solid;
+   border-width:1px 1px 1px 15px;
+   display:block;
+   font-family:monospace;
+   line-height:17px;
+   margin:6px 10px 8px 0;
+   overflow:hidden;
+   padding:2px 30px 2px 15px;
+   text-align:left;
+   white-space:pre;
+}
+
+
+/*=======================================
+* Floats
+* ======================================*/
+.left{ float: left; }
+.right{ float: right; }
+.clear{ clear: both; height: 0px; font-size: 1px; }
+
+
+/*=======================================
+* Demos
+* ======================================*/
+#demonstrations ul.rooms{
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+#demonstrations ul.rooms li.room{
+   float: left;
+   padding: 3px 0 7px 3px;
+   margin: 0 5px 5px 0;
+   width: 100px;
+   
+   text-align: center;
+   list-style-type: none;
+}
+
+   #demonstrations ul.rooms li.room .pad1, 
+   #demonstrations ul.rooms li.room .pad2, 
+   #demonstrations ul.rooms li.room .pad3{
+      height: 22px;
+      float: left;
+      margin: 0 3px 5px 0;
+      position: relative;
+      cursor: default;
+      
+      border: 1px solid #6699CC;
+      background-color: white;
+   }
+   
+   #demonstrations ul.rooms li.room .pad1{ width: 95px; float: none; }
+   #demonstrations ul.rooms li.room .pad2{ width: 45px; }
+   #demonstrations ul.rooms li.room .pad3{ width: 28px; }
+
+
+#demonstrations ul li img{
+   display: block;
+}
+
+/*=======================================
+* Tooltips
+* ======================================*/
+.simpletip{ position: absolute; }
+
+   .simpletip .content{
+      font-size: 11px;
+   }
+
+   .simpletip .content .title{
+      padding: 5px 7px;
+      margin: -6px -6px 8px;
+      background-color: #eee;
+      font-weight: bold;
+      color: #999;
+   }
+      
+      .simpletip .content .title .close{ float: right; }
+      
+   .simpletip .ajaxdemo{
+      font-size: 10px;
+   }
+   
+      .simpletip .ajaxdemo h1{
+         margin: 3px 0 5px;
+         font-size: 15px;
+         font-family: Georgia, serif;
+      }
+      
+      .simpletip .ajaxdemo img{ float: left; padding: 0 7px 7px 0; }
+
+.tooltip .content{
+   width: 160px;
+   padding: 7px;
+   border: 5px solid #EBE4B4;
+   background-color: #F8F4CA;
+   
+   font-size: 11px;
+   color: #BB9C61;
+}
+
+   .tooltip .content .title{
+      margin: -7px -7px 5px;
+      background-color: #F3EDC2;
+      color: #BB9C61;
+   }
+
+.tooltip-simple .content{
+   width: 140px;
+   padding: 3px 7px;
+   
+   border: 1px solid #ddd;
+   background-color: white;
+}
+
+.tooltip-blue .content{
+   width: 160px;
+   padding: 9px;
+   
+   border: 7px solid #448FD8;
+   
+   background-color: #5FADFA;
+   color: white;
+}
+
+   .tooltip-blue .content .title{
+      margin: -9px -9px 5px;
+      background-color: #0D7CD0;
+      color: white;
+   }
+   
+      .tooltip-blue .content .title a.close{
+         height: 22px;
+         width: 28px;
+         display: block;
+         float: right;
+         margin: -3px -3px 0 0;
+         
+         background: transparent url('/simpletip/sandbox/images/buttonblue.jpg') no-repeat 0 0;
+      }
+
+.tooltip-light .content{
+   width: 200px;
+   padding: 6px;
+   
+   border: 6px solid #ccc;
+   
+   background-color: white;
+   color: #303030;
+}
+
+   .tooltip-light .content .title{
+      margin: -6px -6px 5px;
+      background-color: #eee;
+      color: #999;
+   }
+
+      .tooltip-light .content .title a,
+      .tooltip-light .content .title a:link,
+      .tooltip-light .content .title a:visited{
+         color: #999;
+      }
+
+
+.tooltip-black .content{
+   width: 190px;
+   padding: 7px;
+   
+   border: 5px solid #303030;
+   
+   background-color: #888;
+   color: white;
+}
+
+   .tooltip-black .content .title{
+      margin: -7px -7px 5px;
+      background-color: #666;
+      color: white;
+   }
+   
+      .tooltip-black .content .title a,
+      .tooltip-black .content .title a:link,
+      .tooltip-black .content .title a:visited{
+         color: white;
+      }
+
+.tooltip-header .content{
+   width: 120px;
+   padding: 10px 25px;
+   
+   color: white;
+   
+   font-size: 15px;
+   text-align: center;
+   text-decoration: none;
+   font-weight: bold;
+   line-height: 21px;
+}
+
+
+   .tooltip-header .downloads{
+      background-color: #4CC744;
+   }
+   
+   .tooltip-header .docs{
+      background-color: #6699CC;
+   }
+
+   .tooltip-header .demo{
+      background-color: #FF7C0A;
+   }
+
+/*=======================================
+* Tables
+* ======================================*/
+table{
+   width: 100%;
+   padding: 0;
+   margin-top: 8px;
+   
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border: 1px solid #6699CC;
+}
+   
+   table thead th{
+      padding: 10px;
+      margin: 0;
+      
+      color: white;
+      background-color: #6699CC;
+      text-align: left;
+      font-weight: bold;
+   }
+   
+   table tr td{
+      padding: 7px 10px;
+      
+      border-bottom: 1px solid #ddd;
+      line-height: 18px;
+      vertical-align: top;
+   }
+   
+   table tr.last td{ border-bottom: 0; }
+  
+   table tr.blank td{
+      height: 9px;
+      padding: 0;
+      overflow: hidden;
+      font-size: 1px;
+      
+      border-bottom: 1px solid #ddd;
+      background-color: #f4f4f4;
+      line-height: 1px;
+   }
+
+
+/*=======================================
+* Google ad banner
+* ======================================*/
+#googlebanner{ 
+   width: 728px;
+   margin: 20px auto; 
+}
+
+
+/*=======================================
+* Beta Advert
+* ======================================*/
+#beta-advert{ 
+   padding: 10px;
+   margin-bottom: 10px;
+   
+   border: 5px solid #EBE4B4;
+   background-color: #F8F4CA;
+   
+   font-size: 17px;
+   text-align: center;
+}
+
+   #beta-advert a,
+   #beta-advert a:link,
+   #beta-advert a:visited{
+      font-size: 17px;
+      font-weight: bold;
+      color: #DF3030;
+   }
+
+
+/*=======================================
+* Master
+* ======================================*/
+#master{
+   width: 900px;
+   margin: 20px auto 0;
+}
+
+   #master .caption{
+      padding-bottom: 7px;
+      font-size: 20px;
+      color: #404040;
+   }
+   
+      #master .caption img{
+         margin: 0 -15px -22px -9px; 
+         behavior: url('/css/iepngfix.htc');
+      }
+      
+   #master .body{
+      padding: 15px;
+      
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border: 2px solid #99BCE0;
+      background-color: #fffdfd;
+   }
+      
+      /*=======================================
+      * Header
+      * ======================================*/
+      #master .body .header{
+         
+      }
+
+         #master .body .header img.logo{
+            behavior: url('/css/iepngfix.htc');
+         }
+         
+         #master .body .header a{
+            height: 76px;
+            width: 120px;
+            display: block;
+            padding: 32px 25px;
+            margin-left: 10px;
+            
+            border-radius: 7px;
+            -moz-border-radius: 7px;
+            -webkit-border-radius: 7px;
+            color: white;
+            
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: 21px;
+         }
+         
+         #master .body .header a.downloads{
+            height: 46px;
+            padding: 47px 25px;
+            background-color: #4CC744;
+         }
+            
+         #master .body .header a.docs{
+            height: 46px;
+            padding: 47px 25px;
+            
+            background-color: #6699CC;
+         }
+         
+         #master .body .header a.demo{
+            height: 46px;
+            padding: 47px 25px;
+            
+            background-color: #FF7C0A;
+         }
+
+      
+      /*=======================================
+      * Content
+      * ======================================*/
+      #master .body .content{
+         line-height: 19px;
+      }
+      
+         #master .body .content h1{
+            margin: 30px 0 0;
+            padding: 0;
+            
+            font-size: 27px;
+         }
+            
+            #master .body .content h1 a{ float: right; text-decoration: none; color: #6699CC; font-size: 19px; color: #DF3030; }
+         
+         #master .body .content h2{
+            margin: 35px 0 3px;
+            
+            font-size: 21px;
+         }
+         
+         /*=======================================
+         * Download
+         * ======================================*/
+         #master .body .content .downloads{
+            
+         }
+         
+            #master .body .content .downloads h1 b{
+               color: #6699CC;
+            }
+         
+            #master .body .content .downloads h2{
+               margin-bottom: 5px;
+               color: #6699CC;
+            }
+         
+               #master .body .content .downloads h2 b{
+                  color: #606060;
+               }
+               
+            #master .body .content .downloads h3{
+               margin: 0 0 4px 13px;
+               
+               font-size: 14px;
+               color: #404040;
+            }
+            
+               #master .body .content .downloads h3 b{
+                  color: #606060;
+               }
+            
+            #master .body .content .downloads table{
+               margin: 15px 0 5px;
+            }
+            
+               #master .body .content .downloads table th{
+                  padding: 4px 10px;
+               }
+            
+            #master .body .content .downloads .tip{
+               font-size: 11px;
+               font-style: italic;
+               text-indent: 10px;
+               color: #909090;
+            }
+               
+            #master .body .content .downloads ul{
+               margin: 0 0 0 45px;
+               padding: 0;
+            }
+            
+               #master .body .content .downloads .thanks{
+                  text-indent: 10px;
+                  font-weight: bold;
+                  font-style: italic;
+               }
+         
+         /*=======================================
+         * Demo
+         * ======================================*/
+         #master .body .content .demo{
+            
+         }
+            
+            #master .body .content .demo .sandbox{
+               padding: 15px 30px;
+               margin: 10px 0 10px 15px;
+               
+               border: 1px solid #6699CC;
+               border-width: 1px 1px 1px 15px;
+               
+               border-radius: 5px;
+               -moz-border-radius: 5px;
+               -webkit-border-radius: 5px;
+               
+               background-color: #f7f7f7;
+               line-height: 33px;
+            }
+            
+               #master .body .content .demo .sandbox a{
+                  cursor: help;
+                  border-bottom: 1px dotted #6699CC;
+               }
+               #master .body .content .demo .sandbox a:hover{ text-decoration: none; }
+               
+                  #master .body .content .demo .sandbox .source{ 
+                     padding: 3px 13px;
+                     margin-right: 15px;
+                     
+                     border: 0; 
+                     border-radius: 5px;
+                     -moz-border-radius: 5px;
+                     -webkit-border-radius: 5px;
+                     
+                     background-color: #FF7C0A;
+                     color: white;
+                     font-weight: bold;
+                     cursor: pointer;
+                  }
+               
+               #master .body .content .demo code{
+                  display: none;
+                  font-weight: normal;
+               }
+         
+         
+         /*=======================================
+         * Documentation
+         * ======================================*/
+         #master .body .content .docs{
+            
+         }
+         
+            #master .body .content .docs table tr td span.prop{ color: #FF7C0A; }
+         
+            #master .body .content .docs table.properties tr td.name{
+               width: 15%;
+               
+               color: #FF7C0A;
+               font-weight: bold;
+            }
+            
+            #master .body .content .docs table.properties tr td.description{
+               width: 45%;
+               padding-right: 20px;
+               
+               border-right: 0;
+            }
+            
+            
+            #master .body .content .docs table.properties tr td.possible{
+               width: 25%;
+            }
+            
+            #master .body .content .docs table.properties tr td.value{
+               width: 15%;
+               background-color: #f4f4f4;
+               font-weight: bold;
+            }
+            
+            #master .body .content .docs table.methods tr td.name{
+               width: 15%;
+               
+               color: #FF7C0A;
+               font-weight: bold;
+            }
+            
+            #master .body .content .docs table.methods tr td.arguments{
+               width: 15%;
+            }
+            
+            #master .body .content .docs table.methods tr td.return{
+               width: 15%;
+               background-color: #f4f4f4;
+               font-weight: bold;
+            }
+            
+            #master .body .content .docs table.methods tr td.description{
+               width: 55%;
+               padding-right: 20px;
+               
+               border-right: 0;
+            }
+                  
+   
+   /*=======================================
+   * Footer
+   * ======================================*/
+   #master .footer{
+      margin-top: 10px;
+      padding-bottom: 10px;
+      float: left;
+      width: 100%;
+      
+      text-align: center;
+      color: #606060;
+   }
+   
+      #master .footer a:link,
+      #master .footer a:visited{
+         font-style: italic;
+         color: #505050;
+      }

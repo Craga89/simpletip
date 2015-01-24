@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+<title>Test Page</title>
+<style type="text/css" title="currentStyle">
+@import "dataTables.css";
+</style>
+<link rel="stylesheet" type="text/css" href="test.css" media="screen" />
+<script src="jquery-1.3.js" type="text/javascript"></script>
+<script src="jquery.simpletip.js" type="text/javascript"></script>
+<script src="jquery.dataTables.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready( function() {
+
+$("#zoomed tbody").simpletip({
+   onBeforeShow: function(){
+      // Note this refers to the API in the callback function
+      var curDate = new Date();
+      this.update(curDate.getSeconds() + ' seconds have elapsed in this minute.');
+   }
+});
+
+$("#aLink").simpletip("This is a test");
+
+// datatables
+/* Add a click handler to the rows - this could be used as a callback */
+$("#zoomed tbody").click(function(event) {
+	$(oTable.fnSettings().aoData).each(function (){
+	$(this.nTr).removeClass('row_selected');
+	});
+	$(event.target.parentNode).addClass('row_selected') ;
+	document.location='VFPS://DETAILEDLISTING/' + event.target.parentNode.firstChild.firstChild.data ;
+});
+
+oTable=$('#zoomed').dataTable({
+bAutoWidth: false,
+bProcessing: true,
+bSortClasses: false,
+bPaginate: false,
+sDom: 'irft',
+sAjaxSource: 'json.txt',
+aoColumns: [{ "sClass": "center" },
+{ "sClass": "right", "sType": "numeric" },
+{ "sClass": "left" },
+{ "sClass": "center" },
+{ "sClass": "center", "sType": "date" },
+{ "sClass": "right", "sType": "numeric" },
+{ "sClass": "center" },
+{ "sClass": "left" },
+{ "sClass": "left" }],
+"fnFooterCallback": function ( nRow, aaData, iStart, iEnd, aiDisplay ) {
+var iTotalListPrice = 0.00;
+var iMinListPrice = 999999999;
+var iMaxListPrice = 999999999 * -1;
+/* Calculate the market share for browsers on this page */
+for ( var i=iStart ; i<iEnd ; i++ )
+{
+iTotalListPrice += aaData[ aiDisplay[i] ][5]*1;
+if ( aaData[aiDisplay[i]] [5]*1 > iMaxListPrice ) iMaxListPrice = aaData[aiDisplay[i]] [5]*1;
+if ( aaData[aiDisplay[i]] [5]*1 < iMinListPrice ) iMinListPrice = aaData[aiDisplay[i]] [5]*1;
+}
+/*
+* Modify the footer row to match what we want */
+var iAvgListPrice = iTotalListPrice / i ;
+var nCells = nRow.getElementsByTagName('th');
+nCells[5].innerHTML =
+iTotalListPrice.toFixed(2) + "<br>" +
+iAvgListPrice.toFixed(2) + "<br>" +
+iMinListPrice.toFixed(2) + "<br>" +
+iMaxListPrice.toFixed(2);
+}
+});
+});
+</script>
+</head>
+<body scroll="no">
+<div id="2DOEXPLSTDETAIL" class="zoomed">
+<a id="aLink" href="">Hover over me</a>
+<table id="zoomed" class="display" cellpadding="0" cellspacing="0" border="0">
+<thead>
+<tr>
+<th style="text-align:center;">Listing #</th>
+<th style="text-align:right;">Street #</th>
+<th style="text-align:left;">Address</th>
+<th style="text-align:center;">Status</th>
+<th style="text-align:center;">Expiry Date</th>
+<th style="text-align:right;">Price</th>
+<th style="text-align:center;">MLS#</th>
+<th style="text-align:left;">Agent</th>
+<th style="text-align:left;">Vendor</th>
+</tr>
+</thead>
+<tbody></tbody>
+<tfoot>
+<tr>
+<th style="text-align:left;">Total<br>Average<br>Minimum<br>Maximum</th>
+<th style="text-align:right;">&nbsp;</th>
+<th style="text-align:left;">&nbsp;</th>
+<th style="text-align:center;">&nbsp;</th>
+<th style="text-align:center;">&nbsp;</th>
+<th style="text-align:right;">$9,999.99</th>
+<th style="text-align:center;">&nbsp;</th>
+<th style="text-align:left;">&nbsp;</th>
+<th style="text-align:left;">&nbsp;</th>
+</tr>
+</tfoot>
+</table>
+</div>
+</body>
+</html>
